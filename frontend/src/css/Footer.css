@@ -1,0 +1,8 @@
+.main_footer {
+  height: 20vh;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: rgb(36, 99, 47);
+  display: flex;
+  justify-content: center;
+}
