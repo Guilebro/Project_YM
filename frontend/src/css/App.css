@@ -5,8 +5,10 @@ html {
 }
 
 body {
-  width: 90vw;
-  margin: 5vw;
+  width: 70vw;
+  margin: 15vw;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
   padding: 0;
   overscroll-behavior: none;
 }
