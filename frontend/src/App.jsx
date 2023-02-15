@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import FilterNav from "./components/FilterNav";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Error from "./pages/Error";
@@ -11,6 +12,7 @@ function App() {
   return (
     <div className="app">
       <Navbar />
+      <FilterNav />
       <Routes>
         <Route path="*" element={<Error />} />
         <Route path="/" element={<Home />} />
