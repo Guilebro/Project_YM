@@ -2,26 +2,25 @@ const filterCards = [
   {
     id: 1,
     name: "jeux de plateaux",
+    link: "/jeux-de-plateaux",
   },
 
   {
     id: 2,
     name: "jeux de figurines",
+    link: "/jeux-de-figurines",
   },
 
   {
     id: 3,
     name: "jeux de cartes",
+    link: "/jeux-de-cartes",
   },
 
   {
-    id: 3,
+    id: 4,
     name: "jeux pour enfants",
-  },
-
-  {
-    id: 3,
-    name: "promotions",
+    link: "/jeux-pour-enfants",
   },
 ];
 

@@ -1,15 +1,15 @@
 .main_filterNav {
-    background-color: blueviolet;
-    height: 5vh;
+  background-color: blueviolet;
+  height: 5vh;
 }
 
 .filter_cards_div {
-display: flex;
-justify-content: space-around;
-align-items: center;
-height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
 }
 
 .filter_cards {
-    border: 1px solid black;
+  color: whitesmoke;
 }

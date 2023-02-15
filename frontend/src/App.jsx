@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Error from "./pages/Error";
 import Basket from "./pages/Basket";
 import Informations from "./pages/Informations";
+import GameList from "./pages/GameList";
 import "./css/App.css";
 
 function App() {
@@ -16,8 +17,12 @@ function App() {
       <Routes>
         <Route path="*" element={<Error />} />
         <Route path="/" element={<Home />} />
+        <Route path="/jeux-de-plateaux" element={<GameList />} />
+        <Route path="/jeux-de-figurines" element={<GameList />} />
+        <Route path="/jeux-de-cartes" element={<GameList />} />
+        <Route path="/jeux-pour-enfants" element={<GameList />} />
         <Route path="/informations" element={<Informations />} />
-        <Route path="/basket" element={<Basket />} />
+        <Route path="/panier" element={<Basket />} />
       </Routes>
       <Footer />
     </div>

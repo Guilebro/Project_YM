@@ -1,11 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/bulleform3.png";
 import "../css/Navbar.css";
 
 function Navbar() {
   return (
     <div className="main_navbar">
-      <img className="logo_navbar" src={logo} alt="Logo du site" />
+      <Link to="/">
+        <img className="logo_navbar" src={logo} alt="Logo du site" />
+      </Link>
       <div className="searchBar_contact">
         <div className="contact">
           <span>Contacte-moi</span>
@@ -21,9 +24,11 @@ function Navbar() {
       </div>
       <div className="basket_account">
         <span>Mon compte</span>
-        <button className="basket_button" type="button">
-          Mon panier
-        </button>
+        <Link to="/panier">
+          <button className="basket_button" type="button">
+            Mon panier
+          </button>
+        </Link>
       </div>
     </div>
   );
