@@ -1,12 +1,12 @@
 import React from "react";
 import FilterLeft from "../components/FilterLeft";
 import Game from "../components/Game";
+import "../css/WarGames.css";
 
 function WarGames() {
   return (
-    <div>
+    <div className="main_warGames">
       <FilterLeft />
-      <p>Jeux de figurines</p>
       <Game />
     </div>
   );

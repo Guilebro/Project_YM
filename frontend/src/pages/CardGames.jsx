@@ -1,12 +1,12 @@
 import React from "react";
 import FilterLeft from "../components/FilterLeft";
 import Game from "../components/Game";
+import "../css/CardGames.css";
 
 function CardGames() {
   return (
-    <div>
+    <div className="main_cardGames">
       <FilterLeft />
-      <p>Jeux de cartes</p>
       <Game />
     </div>
   );

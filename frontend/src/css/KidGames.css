@@ -1,0 +1,5 @@
+.main_kidGames {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}

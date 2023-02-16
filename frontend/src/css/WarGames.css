@@ -1,0 +1,5 @@
+.main_warGames {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}

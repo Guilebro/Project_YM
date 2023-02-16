@@ -1,0 +1,5 @@
+.main_cardGames {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
