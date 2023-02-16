@@ -1,5 +1,11 @@
 .main_boardGames {
-    height: auto;
-    display: flex;
-    justify-content: space-between;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.game_display {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
 }

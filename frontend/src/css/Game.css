@@ -1,5 +1,6 @@
 .main_game {
-    background-color: red;
-    width:52vw;
-    height: 20vh;
+  background-color: red;
+  width: 52vw;
+  height: 20vh;
+  border: 1px solid black;
 }

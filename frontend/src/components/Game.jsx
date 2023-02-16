@@ -1,12 +1,19 @@
+import PropTypes from "prop-types";
 import React from "react";
 import "../css/Game.css";
 
-function Game() {
+function Game({ name, price }) {
   return (
     <div className="main_game">
-      <p>Game</p>
+      <span>{name}</span>
+      <span>{price}</span>
     </div>
   );
 }
+
+Game.propTypes = {
+  name: PropTypes.number.isRequired,
+  price: PropTypes.string.isRequired,
+};
 
 export default Game;
