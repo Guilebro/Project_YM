@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "ArchivoNarrow-Regular";
-  src: url("../assets/fonts/ArchivoNarrow-Regular.ttf");
+  font-family: "PinkChicken-Regular";
+  src: url("../assets/fonts/PinkChicken-Regular.ttf");
 }
 
 html {
@@ -10,6 +10,7 @@ html {
 }
 
 body {
+  background-color: bisque;
   width: 70vw;
   margin: 15vw;
   margin-top: 5vh;
@@ -19,5 +20,5 @@ body {
 }
 
 * {
-  font-family: "ArchivoNarrow-Regular";
+  font-family: "PinkChicken-Regular";
 }

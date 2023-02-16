@@ -1,8 +1,12 @@
+a {
+  text-decoration: none;
+}
+
 .main_navbar {
   height: 25vh;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  background-color: bisque;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: white;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -13,6 +17,7 @@
   height: 5vh;
   width: 25vw;
   border-radius: 10px;
+  padding-left: 1vw;
 }
 
 .basket_button {
@@ -34,7 +39,42 @@
 
 .contact {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contact_link {
+  padding: 0.5vw;
+  color: black;
+}
+
+.contact_link:hover {
+  border-radius: 10px;
+  background-color:hotpink;
+  color: whitesmoke;
+}
+
+
+.contact_logo {
+  display: flex;
+  gap: 0.5vw;
+}
+
+.logo_sn {
+  width: 1.5vw;
+}
+
+.logo_sn:hover {
+  transform: scale(1.5);
+}
+
+.flag_logo {
+  display: flex;
+  gap: 0.2vw;
+}
+
+.flag {
+  width: 1.5vw;
 }
 
 .basket_account {
