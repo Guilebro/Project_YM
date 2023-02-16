@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "ArchivoNarrow-Regular";
+  src: url("../assets/fonts/ArchivoNarrow-Regular.ttf");
+}
+
 html {
   width: 100vw;
   margin: 0;
@@ -11,4 +16,8 @@ body {
   margin-bottom: 5vh;
   padding: 0;
   overscroll-behavior: none;
+}
+
+* {
+  font-family: "ArchivoNarrow-Regular";
 }
