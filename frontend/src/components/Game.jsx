@@ -12,8 +12,8 @@ function Game({ name, price }) {
 }
 
 Game.propTypes = {
-  name: PropTypes.number.isRequired,
-  price: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
 };
 
 export default Game;

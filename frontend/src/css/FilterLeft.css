@@ -1,5 +1,9 @@
 .main_filterLeft {
-  background-color: blue;
+  background-color: #B5DEFF;
   width: 15vw;
   height: 35vh;
+  border: 1px solid black;
+  margin-left: 1vw;
+  margin-top: 2vh;
+  border-radius: 10px;
 }
