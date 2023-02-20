@@ -1,16 +1,11 @@
-import axios from "axios";
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
+import { myContext } from "../context/MyContext";
 import FilterLeft from "../components/FilterLeft";
 import Game from "../components/Game";
 import "../css/BoardGames.css";
 
 function BoardGames() {
-  const [getAllGames, setGetAllGames] = useState([]);
-
-  const getGames = () => {
-    const url = "http://localhost:8000/api/game";
-    axios.get(url).then((response) => setGetAllGames(response.data));
-  };
+  const { getAllGames, getGames } = myContext();
 
   useEffect(() => {
     getGames();

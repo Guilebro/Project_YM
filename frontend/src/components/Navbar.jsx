@@ -6,7 +6,8 @@ import instagram from "../assets/logos/instagram.png";
 import twitter from "../assets/logos/twitter.png";
 import french from "../assets/logos/french.png";
 import uk from "../assets/logos/uk.png";
-
+// eslint-disable-next-line import/no-named-as-default, import/no-named-as-default-member
+import SearchBar from "./SearchBar";
 import "../css/Navbar.css";
 
 function Navbar() {
@@ -21,24 +22,27 @@ function Navbar() {
             <span className="contact_link">Contactez-nous</span>
           </a>
           <span className="contact_logo">
-            <img className="logo_sn" src={facebook} alt="facebook" />
-            <img className="logo_sn" src={instagram} alt="instagram" />
-            <img className="logo_sn" src={twitter} alt="twitter" />
+            <a href="http://www.facebook.com" target="_blank" rel="noreferrer">
+              <img className="logo_sn" src={facebook} alt="facebook" />
+            </a>
+            <a href="http://www.instagram.com" target="_blank" rel="noreferrer">
+              <img className="logo_sn" src={instagram} alt="instagram" />
+            </a>
+            <a href="http://www.twitter.com" target="_blank" rel="noreferrer">
+              <img className="logo_sn" src={twitter} alt="twitter" />
+            </a>
           </span>
           <span className="flag_logo">
             <img className="flag" src={french} alt="french" />
             <img className="flag" src={uk} alt="uk" />
           </span>
         </div>
-        <input
-          type="search"
-          className="input_search"
-          placeholder="Rechercher un jeu ..."
-          name="input_search"
-        />
+        <SearchBar />
       </div>
       <div className="basket_account">
-        <span>Mon compte</span>
+        <Link to="/mon-compte">
+          <span className="account">Mon compte</span>
+        </Link>
         <Link to="/panier">
           <button className="basket_button" type="button">
             Mon panier

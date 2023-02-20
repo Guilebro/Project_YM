@@ -1,9 +1,10 @@
 import React from "react";
+import Game from "../components/Game";
 
 function GameDetails() {
   return (
     <div>
-      <p>Game Details</p>
+      <Game />
     </div>
   );
 }

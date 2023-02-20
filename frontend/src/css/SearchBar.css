@@ -1,0 +1,9 @@
+.input_search {
+    height: 5vh;
+    width: 25vw;
+    border-radius: 10px;
+    padding-left: 1vw;
+    box-shadow: -6px 10px 18px -9px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -6px 10px 18px -9px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -6px 10px 18px -9px rgba(0, 0, 0, 0.75);
+}

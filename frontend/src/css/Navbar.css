@@ -13,28 +13,18 @@ a {
   background-color: white;
 }
 
-.input_search {
-  height: 5vh;
-  width: 25vw;
-  border-radius: 10px;
-  padding-left: 1vw;
-  box-shadow: -6px 10px 18px -9px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: -6px 10px 18px -9px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: -6px 10px 18px -9px rgba(0, 0, 0, 0.75);
-}
-
 .basket_button {
   height: 5vh;
   width: 10vw;
   border-radius: 10px;
-  background-color: #ea7e40;
+  background-color: #ffc93c;
   box-shadow: -6px 10px 18px -9px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: -6px 10px 18px -9px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: -6px 10px 18px -9px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -6px 10px 18px -9px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -6px 10px 18px -9px rgba(0, 0, 0, 0.75);
 }
 
 .basket_button:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .logo_navbar {
@@ -63,10 +53,9 @@ a {
 
 .contact_link:hover {
   border-radius: 10px;
-  background-color: #ea7e40;
+  background-color: #ffc93c;
   color: whitesmoke;
 }
-
 
 .contact_logo {
   display: flex;
@@ -96,4 +85,8 @@ a {
   align-items: center;
   gap: 2vh;
   padding-bottom: 2vh;
+}
+
+.account {
+  color: black;
 }

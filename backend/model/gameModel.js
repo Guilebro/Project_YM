@@ -6,4 +6,8 @@ const findAllGames = () => {
   return db.query("SELECT * FROM game");
 };
 
-module.exports = { findAllGames };
+const findOneGame = (id) => {
+  return db.query("SELECT * FROM game WHERE id = ? ", [id]);
+};
+
+module.exports = { findAllGames, findOneGame };
