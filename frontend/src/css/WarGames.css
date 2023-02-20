@@ -2,4 +2,15 @@
   height: auto;
   display: flex;
   justify-content: space-between;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.wargame_display {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5vw;
+  margin-bottom: 5vh;
+  margin-right: 1vw;
+  gap: 1vw;
 }

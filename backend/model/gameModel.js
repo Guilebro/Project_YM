@@ -10,4 +10,8 @@ const findOneGame = (id) => {
   return db.query("SELECT * FROM game WHERE id = ? ", [id]);
 };
 
-module.exports = { findAllGames, findOneGame };
+const findGameByGenre = (genre) => {
+  return db.query("SELECT * FROM game WHERE genre = ? ", [genre]);
+};
+
+module.exports = { findAllGames, findOneGame, findGameByGenre };

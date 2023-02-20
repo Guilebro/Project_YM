@@ -11,7 +11,7 @@ import WarGames from "./pages/WarGames";
 import CardGames from "./pages/CardGames";
 import KidGames from "./pages/KidGames";
 import Account from "./pages/Account";
-import GameDetails from "./components/Game";
+import GameDetails from "./pages/GameDetails";
 import "./css/App.css";
 
 function App() {

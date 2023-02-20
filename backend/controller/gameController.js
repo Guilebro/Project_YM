@@ -11,7 +11,15 @@ const gameController = {
   getGameById: (req, res) => {
     const { id } = req.params;
     gameModel
-      .findOneGameByID(id)
+      .findOneGame(id)
+      .then(([game]) => res.send(game))
+      .catch((err) => res.send(err));
+  },
+
+  getGameByByGenre: (req, res) => {
+    const { genre } = req.params;
+    gameModel
+      .findGameByGenre(genre)
       .then(([game]) => res.send(game))
       .catch((err) => res.send(err));
   },

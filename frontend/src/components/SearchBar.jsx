@@ -9,13 +9,13 @@ function SearchBar() {
     query: "",
     list: [],
   });
-  const fetchData = () => {
+  const fetchGameTyped = () => {
     const url = "http://localhost:8000/api/game";
     axios.get(url).then((response) => setGetGames(response.data));
   };
 
   useEffect(() => {
-    fetchData();
+    fetchGameTyped();
   }, []);
 
   const handleChange = (e) => {
@@ -44,7 +44,7 @@ function SearchBar() {
           ? ""
           : myGames.list.map((element) => (
               <li key={element.name}>
-                <Link to="/details-jeu">{element.name}</Link>
+                <Link to={`/jeu/${element.id}`}>{element.name}</Link>
               </li>
             ))}
       </ul>
