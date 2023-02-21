@@ -19,7 +19,7 @@ function Navbar() {
       <div className="searchBar_contact">
         <div className="contact">
           <a href="mailto:yanngrard@gmail.com" target="_blank" rel="noreferrer">
-            <span className="contact_link">Contactez-nous</span>
+            <span className="contact_link"> ✉️ Contactez-nous</span>
           </a>
           <span className="contact_logo">
             <a href="http://www.facebook.com" target="_blank" rel="noreferrer">
@@ -45,7 +45,7 @@ function Navbar() {
         </Link>
         <Link to="/panier">
           <button className="basket_button" type="button">
-            Mon panier
+            🛒 Mon panier
           </button>
         </Link>
       </div>

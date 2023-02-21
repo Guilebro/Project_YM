@@ -68,6 +68,7 @@ a {
 
 .logo_sn:hover {
   transform: scale(1.5);
+  transition: ease-out 0.8s;
 }
 
 .flag_logo {
