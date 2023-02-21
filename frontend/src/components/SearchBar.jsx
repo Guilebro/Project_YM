@@ -29,6 +29,10 @@ function SearchBar() {
     });
   };
 
+  const refreshPage = () => {
+    window.location.reload(false);
+  };
+
   return (
     <div>
       <input
@@ -43,7 +47,8 @@ function SearchBar() {
         {myGames.query === ""
           ? ""
           : myGames.list.map((element) => (
-              <li key={element.name}>
+              // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions
+              <li onClick={refreshPage} key={element.name}>
                 <Link to={`/jeu/${element.id}`}>{element.name}</Link>
               </li>
             ))}
