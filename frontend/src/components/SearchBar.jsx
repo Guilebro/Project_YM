@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import SearchBarResults from "./SearchBarResults";
 import "../css/SearchBar.css";
 
 function SearchBar() {
@@ -29,10 +29,6 @@ function SearchBar() {
     });
   };
 
-  const refreshPage = () => {
-    window.location.reload(false);
-  };
-
   return (
     <div>
       <input
@@ -43,16 +39,13 @@ function SearchBar() {
         name="input_search"
         placeholder="Rechercher un jeu..."
       />
-      <ul>
+      <div className="div_results">
         {myGames.query === ""
           ? ""
           : myGames.list.map((element) => (
-              // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions
-              <li onClick={refreshPage} key={element.name}>
-                <Link to={`/jeu/${element.id}`}>{element.name}</Link>
-              </li>
+              <SearchBarResults id={element.id} name={element.name} />
             ))}
-      </ul>
+      </div>
     </div>
   );
 }

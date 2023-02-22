@@ -21,3 +21,10 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
+
+.div_results {
+  position: absolute;
+  background-color: rgb(167, 165, 165);
+  border-radius: 10px;
+  margin-top: 1vh;
+}

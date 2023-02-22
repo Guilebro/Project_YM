@@ -10,7 +10,6 @@ import BoardGames from "./pages/BoardGames";
 import WarGames from "./pages/WarGames";
 import CardGames from "./pages/CardGames";
 import KidGames from "./pages/KidGames";
-import Account from "./pages/Account";
 import GameDetails from "./pages/GameDetails";
 import "./css/App.css";
 
@@ -29,7 +28,6 @@ function App() {
         <Route path="/jeu/:id" element={<GameDetails />} />
         <Route path="/informations" element={<Informations />} />
         <Route path="/panier" element={<Basket />} />
-        <Route path="/mon-compte" element={<Account />} />
       </Routes>
       <Footer />
     </div>

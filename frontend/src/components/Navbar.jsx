@@ -6,7 +6,6 @@ import instagram from "../assets/logos/instagram.png";
 import twitter from "../assets/logos/twitter.png";
 import french from "../assets/logos/french.png";
 import uk from "../assets/logos/uk.png";
-// eslint-disable-next-line import/no-named-as-default, import/no-named-as-default-member
 import SearchBar from "./SearchBar";
 import "../css/Navbar.css";
 
@@ -39,16 +38,11 @@ function Navbar() {
         </div>
         <SearchBar />
       </div>
-      <div className="basket_account">
-        <Link to="/mon-compte">
-          <span className="account">Mon compte</span>
-        </Link>
-        <Link to="/panier">
-          <button className="basket_button" type="button">
-            🛒 Mon panier
-          </button>
-        </Link>
-      </div>
+      <Link to="/panier">
+        <button className="basket_button" type="button">
+          🛒 Mon panier
+        </button>
+      </Link>
     </div>
   );
 }

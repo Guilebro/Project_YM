@@ -35,7 +35,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 2vh;
-  padding-bottom: 2vh;
+  margin-bottom: 5.5vh;
 }
 
 .contact {
@@ -78,16 +78,4 @@ a {
 
 .flag {
   width: 1.5vw;
-}
-
-.basket_account {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2vh;
-  padding-bottom: 2vh;
-}
-
-.account {
-  color: black;
 }
