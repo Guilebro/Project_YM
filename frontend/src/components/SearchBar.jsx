@@ -9,6 +9,7 @@ function SearchBar() {
     query: "",
     list: [],
   });
+
   const fetchGameTyped = () => {
     const url = "http://localhost:8000/api/game";
     axios.get(url).then((response) => setGetGames(response.data));

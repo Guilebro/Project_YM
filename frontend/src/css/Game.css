@@ -5,4 +5,12 @@
   border-radius: 10px;
   background-color: #a3d2ca;
   color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.game_picture {
+  width: 8vw;
+  height: auto;
 }

@@ -18,10 +18,11 @@ function SearchBarResults({ id, name }) {
           aria-hidden="true"
           key={name}
         >
-          {" "}
-          <Link className="results" to={`/jeu/${id}`}>
-            {name}
-          </Link>
+          <div className="name_results">
+            <Link className="results" to={`/jeu/${id}`}>
+              {name}
+            </Link>
+          </div>
         </li>
       </div>
     </div>
