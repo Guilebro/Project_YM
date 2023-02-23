@@ -22,7 +22,7 @@ function BoardGames() {
               name={element.name}
               price={element.price}
               genre={element.genre}
-              image={element.picture}
+              picture={element.picture}
             />
           </Link>
         ))}
