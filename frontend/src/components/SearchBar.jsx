@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
+// eslint-disable-next-line import/no-named-as-default, import/no-named-as-default-member
 import SearchBarResults from "./SearchBarResults";
 import "../css/SearchBar.css";
 
@@ -44,7 +45,12 @@ function SearchBar() {
         {myGames.query === ""
           ? ""
           : myGames.list.map((element) => (
-              <SearchBarResults id={element.id} name={element.name} />
+              <SearchBarResults
+                id={element.id}
+                name={element.name}
+                picture={element.picture}
+                genre={element.genre}
+              />
             ))}
       </div>
     </div>
