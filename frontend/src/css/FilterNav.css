@@ -1,0 +1,15 @@
+.main_filterNav {
+  background-color: #5eaaa8;
+  height: 5vh;
+}
+
+.filter_cards_div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.filter_cards {
+  color: whitesmoke;
+}
