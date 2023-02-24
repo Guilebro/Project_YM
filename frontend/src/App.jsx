@@ -11,6 +11,7 @@ import WarGames from "./pages/WarGames";
 import CardGames from "./pages/CardGames";
 import KidGames from "./pages/KidGames";
 import GameDetails from "./pages/GameDetails";
+import GameSearched from "./pages/GameSearched";
 import "./css/App.css";
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path="/jeu/:id" element={<GameDetails />} />
         <Route path="/informations" element={<Informations />} />
         <Route path="/panier" element={<Basket />} />
+        <Route path="/recherche/:query" element={<GameSearched />} />
       </Routes>
       <Footer />
     </div>
