@@ -21,18 +21,19 @@ function SearchBar() {
   }, []);
 
   const handleChange = (e) => {
+    const searchWord = e.target.value;
     const results = getGames.filter((games) => {
-      if (e.target.value === "") return games;
-      return games.name.toLowerCase().includes(e.target.value.toLowerCase());
+      if (searchWord === "") return games;
+      return games.name.toLowerCase().includes(searchWord.toLowerCase());
     });
     setMyGames({
-      query: e.target.value,
+      query: searchWord,
       list: results,
     });
   };
 
   return (
-    <div>
+    <form>
       <input
         className="input_search"
         type="search"
@@ -53,7 +54,7 @@ function SearchBar() {
               />
             ))}
       </div>
-    </div>
+    </form>
   );
 }
 
