@@ -9,24 +9,21 @@ function SearchBarResults({ id, name, picture, genre }) {
   };
 
   return (
-    <div className="main_searchBarResults">
-      <div className="div_gamesList">
-        <li
-          className="gamesList"
+    <div>
+      <li className="gamesList" key={name}>
+        <div
+          className="name_results"
           onClick={refreshPage}
           onKeyDown={refreshPage}
           aria-hidden="true"
-          key={name}
         >
-          <div className="name_results">
-            <Link className="results" to={`/jeu/${id}`}>
-              <img className="game_picture_results" src={picture} alt="jeu" />
-              <span>{name}</span>
-              <span>{`Genre: ${genre}`}</span>
-            </Link>
-          </div>
-        </li>
-      </div>
+          <Link className="results" to={`/jeu/${id}`}>
+            <img className="game_picture_results" src={picture} alt="jeu" />
+            <span>{name}</span>
+            <span>{`Genre: ${genre}`}</span>
+          </Link>
+        </div>
+      </li>
     </div>
   );
 }
