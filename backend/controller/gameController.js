@@ -16,7 +16,7 @@ const gameController = {
       .catch((err) => res.send(err));
   },
 
-  getGameByByGenre: (req, res) => {
+  getGameByGenre: (req, res) => {
     const { genre } = req.params;
     gameModel
       .findGameByGenre(genre)
