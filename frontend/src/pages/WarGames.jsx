@@ -21,6 +21,7 @@ function WarGames() {
               name={element.name}
               price={element.price}
               genre={element.genre}
+              picture={element.picture}
             />
           </Link>
         ))}

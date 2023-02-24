@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import Game from "../components/Game";
 
 function GameSearched() {
   const { query } = useParams();
@@ -20,7 +21,13 @@ function GameSearched() {
       {searchResult
         .filter((game) => game.name.toLowerCase().includes(query.toLowerCase()))
         .map((element) => (
-          <li>{element.name}</li>
+          <Link to={`/jeu/${element.id}`}>
+            <Game
+              name={element.name}
+              genre={element.genre}
+              picture={element.picture}
+            />
+          </Link>
         ))}
     </div>
   );

@@ -1,11 +1,11 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-// eslint-disable-next-line import/no-named-as-default, import/no-named-as-default-member
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import SearchBarResults from "./SearchBarResults";
 import "../css/SearchBar.css";
 
 function SearchBar() {
+  const navigate = useNavigate();
   const [getGames, setGetGames] = useState("");
   const [myGames, setMyGames] = useState({
     query: "",
@@ -33,13 +33,12 @@ function SearchBar() {
     });
   };
 
+  const handleSearch = () => {
+    navigate(`/recherche/${myGames.query}`);
+  };
+
   return (
-    <form>
-      <Link to={`/recherche/${myGames.query}`}>
-        <button className="search_button" type="button">
-          Rechercher
-        </button>
-      </Link>
+    <form onSubmit={handleSearch}>
       <input
         className="input_search"
         type="search"
@@ -60,6 +59,11 @@ function SearchBar() {
               />
             ))}
       </div>
+      {/* <Link to={`/recherche/${myGames.query}`}>
+        <button className="search_button" type="button">
+          Rechercher
+        </button>
+      </Link> */}
     </form>
   );
 }
