@@ -3,6 +3,7 @@
   background-size: 1.5vw;
   background-position: left;
   background-position-x: 0.5vw;
+  background-color: whitesmoke;
   height: 5vh;
   width: 25vw;
   border-radius: 10px;
@@ -18,8 +19,6 @@
 
 .div_results {
   position: absolute;
-  background-color: rgb(109, 107, 107);
-  border-radius: 10px;
   margin-top: 1vh;
   width: 25vw;
 }

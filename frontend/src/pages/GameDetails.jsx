@@ -18,7 +18,7 @@ function GameDetails() {
           <span>{element.name}</span>
           <span>{element.price}</span>
           <span>{element.genre}</span>
-          <img src={element.picture} alt="zombicide" />
+          <img src={element.picture} alt="boite du jeu" />
         </div>
       ))}
     </div>
