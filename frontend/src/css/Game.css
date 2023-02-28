@@ -6,9 +6,9 @@
   justify-content: flex-start;
   align-items: center;
   padding: 1vw;
-  border-bottom: 1px solid black;
+  border: 1px solid black;
+  border-radius: 10px;
 }
-
 
 .game_picture {
   width: 8vw;

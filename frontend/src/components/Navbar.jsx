@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/bulleform3.png";
+import logo from "../assets/logo.png";
 import facebook from "../assets/logos/facebook.png";
 import instagram from "../assets/logos/instagram.png";
 import twitter from "../assets/logos/twitter.png";
+import panier from "../assets/logos/panier.png";
 import SearchBar from "./SearchBar";
 import "../css/Navbar.css";
 
@@ -34,7 +35,8 @@ function Navbar() {
       </div>
       <Link to="/panier">
         <button className="basket_button" type="button">
-          🛒 Mon panier
+          <img className="basket_logo" src={panier} alt="panier" />
+          Mon panier
         </button>
       </Link>
     </div>

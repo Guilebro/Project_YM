@@ -1,17 +1,31 @@
 .main_filterNav {
   border: 1px solid black;
-  background-color: whitesmoke;
+  border-top: none;
+  background-color: #FFB84C;
   height: 5vh;
+  padding-bottom: 1vh;
 }
 
 .filter_cards_div {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
+  margin-left: 1vw;
+  gap: 1.5vw;
   align-items: center;
   height: 100%;
 }
 
 .filter_cards {
-  color: black;
-  background-color: whitesmoke;
+  font-size: 1.5em;
+  font-family: "Alone On Earth";
+  color: whitesmoke;
+  border-radius: 10px;
+  padding: 0.5vw;
+  border: 1px solid black;
+  background-color: #F16767;
+}
+
+.filter_cards:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
 }

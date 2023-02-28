@@ -59,11 +59,6 @@ function SearchBar() {
               />
             ))}
       </div>
-      {/* <Link to={`/recherche/${myGames.query}`}>
-        <button className="search_button" type="button">
-          Rechercher
-        </button>
-      </Link> */}
     </form>
   );
 }

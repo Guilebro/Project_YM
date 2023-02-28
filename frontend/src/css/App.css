@@ -3,6 +3,11 @@
   src: url("../assets/fonts/PinkChicken-Regular.ttf");
 }
 
+@font-face {
+  font-family: "Alone On Earth";
+  src: url("../assets/fonts/AloneOnEarth.otf");
+}
+
 html {
   width: 100vw;
   margin: 0;
