@@ -4,6 +4,7 @@ import { myContext } from "../context/MyContext";
 import FilterLeft from "../components/FilterLeft";
 import Game from "../components/Game";
 import "../css/KidGames.css";
+import Select from "../components/Select";
 
 function KidGames() {
   const { fetchKidGames, getKidGames } = myContext();
@@ -15,6 +16,8 @@ function KidGames() {
     <div className="main_kidGames">
       <FilterLeft />
       <div className="kidgame_display">
+        <h1 className="genre_title">Jeux pour enfants</h1>
+        <Select />
         {fetchKidGames.map((element) => (
           <Link to={`/jeu/${element.id}`} key={element.id}>
             <Game

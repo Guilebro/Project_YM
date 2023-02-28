@@ -22,6 +22,7 @@ function GameSearched() {
     <div className="main_gameSearched">
       <FilterLeft />
       <div className="gameSearched_display">
+        <h1>résultats de recherche</h1>
         {searchResult
           .filter((game) =>
             game.name.toLowerCase().includes(query.toLowerCase())
