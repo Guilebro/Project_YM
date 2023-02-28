@@ -1,8 +1,8 @@
 .main_boardGames {
   height: auto;
   display: flex;
-  justify-content: space-between;
-  background-color: whitesmoke;
+  justify-content: flex-start;
+  background-color: white;
   border: 1px solid black;
 }
 
@@ -12,5 +12,7 @@
   margin-top: 5vw;
   margin-bottom: 5vh;
   margin-right: 1vw;
+  margin-left: 1vw;
   gap: 1vw;
+  border: 1px solid black;
 }

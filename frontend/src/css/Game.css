@@ -1,38 +1,54 @@
 .main_game {
-  width: 52vw;
+  width: 35vw;
   height: 20vh;
   border: 1px solid black;
   border-radius: 10px;
   background-color: whitesmoke;
   color: black;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
 }
 
 .game_picture {
   width: 8vw;
   height: auto;
+  margin-left: 1vw;
 }
 
 .text_infos {
   display: flex;
-  width: 25vw;
-  height: 20vh;
+  width: 100%;
+  height: 100%;
   flex-direction: column;
   justify-content: space-evenly;
-}
-
-.game_infos {
-  display: flex;
-  justify-content: space-between;
+  margin-left: 1vw;
 }
 
 .price_basket_details {
-  width: 10vw;
-  height: 20vh;
+  width: fit-content;
+  height: auto;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  
+  gap: 1vw;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+.basket_details_button {
+    height: 5vh;
+    width: 10vw;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    box-shadow: -6px 10px 18px -9px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -6px 10px 18px -9px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -6px 10px 18px -9px rgba(0, 0, 0, 0.75);
+}
+
+.game_name {
+  font-size: 1.5em;
+}
+
+.game_price {
+  font-size: 2em;
 }

@@ -4,8 +4,6 @@ import logo from "../assets/bulleform3.png";
 import facebook from "../assets/logos/facebook.png";
 import instagram from "../assets/logos/instagram.png";
 import twitter from "../assets/logos/twitter.png";
-import french from "../assets/logos/french.png";
-import uk from "../assets/logos/uk.png";
 import SearchBar from "./SearchBar";
 import "../css/Navbar.css";
 
@@ -30,10 +28,6 @@ function Navbar() {
             <a href="http://www.twitter.com" target="_blank" rel="noreferrer">
               <img className="logo_sn" src={twitter} alt="twitter" />
             </a>
-          </span>
-          <span className="flag_logo">
-            <img className="flag" src={french} alt="french" />
-            <img className="flag" src={uk} alt="uk" />
           </span>
         </div>
         <SearchBar />

@@ -18,10 +18,16 @@ function KidGames() {
         {fetchKidGames.map((element) => (
           <Link to={`/jeu/${element.id}`} key={element.id}>
             <Game
+              id={element.id}
               name={element.name}
               price={element.price}
               genre={element.genre}
               picture={element.picture}
+              description={element.description}
+              language={element.language}
+              age={element.age}
+              nbPlayers={element.nb_players}
+              duration={element.duration}
             />
           </Link>
         ))}
