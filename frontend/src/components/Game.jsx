@@ -8,18 +8,22 @@ function Game({ id, name, price, picture, description }) {
     <div className="global_game">
       <div className="main_game">
         <img className="game_picture" src={picture} alt="jeu" />
-        <div className="text_infos">
+        <div className="all_infos">
           <span className="game_name">{name}</span>
           <span className="game_price">{`${price} € `}</span>
-          <span>{description}</span>
-          <div className="price_basket_details">
+          <span className="description_text">{description}</span>
+          <div className="div_basket_details_buttons">
             <Link to="/panier">
               <button className="basket_details_button" type="button">
                 Ajouter au panier
               </button>
             </Link>
             <Link to={`/jeu/${id}`}>
-              <button className="basket_details_button" type="button">
+              <button
+                className="basket_details_button"
+                id="details_button"
+                type="button"
+              >
                 Voir détails
               </button>
             </Link>

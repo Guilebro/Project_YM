@@ -1,12 +1,12 @@
 .gamesList {
   list-style: none;
+  background-color: whitesmoke;
 }
 
 .results {
   border: 1px solid black;
   display: flex;
-  background-color: whitesmoke;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
   color: black;
   width: 100%;
@@ -14,16 +14,24 @@
 }
 
 .results:hover {
-  color: black;
   background-color: orange;
 }
 
 .name_results {
-  border-radius: 10px;
   height: 8vh;
 }
 
 .game_picture_results {
   width: 3vw;
   margin: 0.5vw;
+}
+
+.price_results {
+  padding-left: 1vw;
+  font-size: 1.2em;
+}
+
+.genre_results {
+  padding-left: 1.5vw;
+  font-style: italic;
 }

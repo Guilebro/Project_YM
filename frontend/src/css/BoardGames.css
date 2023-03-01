@@ -9,13 +9,8 @@
 .boardgame_display {
   display: flex;
   flex-direction: column;
-  margin-top: 2vw;
   margin-bottom: 5vh;
   margin-right: 1vw;
   margin-left: 1vw;
   gap: 1vw;
-}
-
-.genre_title {
-  font-size: 3em;
 }

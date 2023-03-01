@@ -55,6 +55,7 @@ function SearchBar() {
                 id={element.id}
                 name={element.name}
                 picture={element.picture}
+                price={element.price}
                 genre={element.genre}
               />
             ))}

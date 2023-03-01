@@ -4,14 +4,38 @@ a {
 
 .main_navbar {
   height: 20vh;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   border: 1px solid black;
   border-bottom: none;
-  background-color: #FFB84C;
+}
+
+.logos_searchbar_basket {
+  display: flex;
+  align-items: flex-end;
+  gap: 15vh;
+}
+
+.logos_searchbar {
+  display: flex;
+  gap: 0.5vh;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.logos {
+  display: flex;
+  margin-left: 0.5vw;
+  align-items: flex-end;
+  width: 100%;
+  gap: 0.5vw;
+}
+
+.div_buttons {
+  display: flex;
+  gap: 1vw;
 }
 
 .basket_button {
@@ -21,9 +45,7 @@ a {
   gap: 1vw;
   height: 5vh;
   width: 10vw;
-  border: 1px solid black;
   border-radius: 10px;
-  background-color: #f2f2f2;
   box-shadow: -6px 10px 18px -9px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: -6px 10px 18px -9px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -6px 10px 18px -9px rgba(0, 0, 0, 0.75);
@@ -34,46 +56,38 @@ a {
   transition: 0.5s;
 }
 
-.basket_logo {
-  width: 1.5vw;
-}
-
-.logo_navbar {
-  width: 12vw;
-}
-
-.searchBar_contact {
+.account_button {
   display: flex;
-  flex-direction: column;
-  gap: 2vh;
-}
-
-.contact {
-  display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-}
-
-.contact_link {
-  font-size: 0.8em;
-  padding: 0.5vw;
-  color: black;
+  height: 5vh;
+  width: 10vw;
   border-radius: 10px;
-  background-color: whitesmoke;
-  border: 1px solid black;
-   box-shadow: -6px 10px 18px -9px rgba(0, 0, 0, 0.75);
+  box-shadow: -6px 10px 18px -9px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: -6px 10px 18px -9px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -6px 10px 18px -9px rgba(0, 0, 0, 0.75);
 }
 
-.contact_link:hover {
-  border-radius: 10px;
-  color: black;
+.account_button:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
 }
 
-.contact_logo {
-  display: flex;
-  gap: 0.5vw;
+.button_text {
+  font-size: 1em;
+}
+
+.basket_logo {
+  width: 1.5vw;
+}
+
+.account_logo {
+  width: 2.5vw;
+  padding-right: 0.5vw;
+}
+
+.logo_navbar {
+  width: 12vw;
 }
 
 .logo_sn {
@@ -83,13 +97,4 @@ a {
 .logo_sn:hover {
   transform: scale(1.5);
   transition: ease-out 0.8s;
-}
-
-.flag_logo {
-  display: flex;
-  gap: 0.2vw;
-}
-
-.flag {
-  width: 1.5vw;
 }

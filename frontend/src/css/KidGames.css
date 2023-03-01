@@ -9,7 +9,6 @@
 .kidgame_display {
   display: flex;
   flex-direction: column;
-  margin-top: 2vw;
   margin-bottom: 5vh;
   margin-right: 1vw;
   margin-left: 1vw;

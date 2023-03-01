@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../css/SearchBarResults.css";
 
-function SearchBarResults({ id, name, picture, genre }) {
+function SearchBarResults({ id, name, picture, price, genre }) {
   const refreshPage = () => {
     window.location.reload(false);
   };
@@ -20,7 +20,8 @@ function SearchBarResults({ id, name, picture, genre }) {
           <Link className="results" to={`/jeu/${id}`}>
             <img className="game_picture_results" src={picture} alt="jeu" />
             <span>{name}</span>
-            <span>{`Genre: ${genre}`}</span>
+            <span className="price_results">{`${price} €`}</span>
+            <span className="genre_results">{`- ${genre} -`}</span>
           </Link>
         </div>
       </li>
@@ -32,6 +33,7 @@ SearchBarResults.propTypes = {
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   picture: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
   genre: PropTypes.string.isRequired,
 };
 
