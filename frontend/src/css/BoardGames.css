@@ -1,7 +1,7 @@
 .main_boardGames {
   height: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   background-color: white;
   border: 1px solid black;
 }
@@ -9,8 +9,8 @@
 .boardgame_display {
   display: flex;
   flex-direction: column;
-  margin-top: 5vw;
   margin-bottom: 5vh;
   margin-right: 1vw;
+  margin-left: 1vw;
   gap: 1vw;
 }

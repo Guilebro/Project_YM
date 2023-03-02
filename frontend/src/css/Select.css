@@ -1,0 +1,12 @@
+.main_select {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.filter_select {
+  padding-left: 1vw;
+  width: 10vw;
+  height: 3vh;
+}

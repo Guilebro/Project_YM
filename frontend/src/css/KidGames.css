@@ -1,16 +1,16 @@
 .main_kidGames {
   height: auto;
   display: flex;
-  justify-content: space-between;
-  background-color: white;
+  justify-content: flex-start;
+  background-color: whitesmoke;
   border: 1px solid black;
 }
 
 .kidgame_display {
   display: flex;
   flex-direction: column;
-  margin-top: 5vw;
   margin-bottom: 5vh;
   margin-right: 1vw;
+  margin-left: 1vw;
   gap: 1vw;
 }

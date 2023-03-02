@@ -1,12 +1,12 @@
-.main_cardGames {
+.main_gameSearched {
   height: auto;
   display: flex;
   justify-content: flex-start;
-  background-color: whitesmoke;
+  background-color: white;
   border: 1px solid black;
 }
 
-.cardgame_display {
+.gameSearched_display {
   display: flex;
   flex-direction: column;
   margin-bottom: 5vh;

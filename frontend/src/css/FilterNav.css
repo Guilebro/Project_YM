@@ -1,15 +1,31 @@
 .main_filterNav {
-  background-color: #5eaaa8;
+  border: 1px solid black;
+  border-top: none;
   height: 5vh;
+  padding-bottom: 1vh;
 }
 
 .filter_cards_div {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
+  margin-left: 1vw;
+  gap: 1.5vw;
   align-items: center;
   height: 100%;
 }
 
 .filter_cards {
-  color: whitesmoke;
+  font-size: 1.2em;
+  color: black;
+  border-radius: 10px;
+  padding: 0.5vw;
+  border: 1px solid black;
+  box-shadow: -6px 10px 18px -9px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -6px 10px 18px -9px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -6px 10px 18px -9px rgba(0, 0, 0, 0.75);
+}
+
+.filter_cards:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
 }

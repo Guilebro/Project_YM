@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/bulleform3.png";
+import logo from "../assets/logo.png";
 import facebook from "../assets/logos/facebook.png";
 import instagram from "../assets/logos/instagram.png";
 import twitter from "../assets/logos/twitter.png";
-import french from "../assets/logos/french.png";
-import uk from "../assets/logos/uk.png";
+import panier from "../assets/logos/panier.png";
+import avatar from "../assets/logos/avatar.png";
 import SearchBar from "./SearchBar";
 import "../css/Navbar.css";
 
@@ -15,12 +15,9 @@ function Navbar() {
       <Link to="/">
         <img className="logo_navbar" src={logo} alt="Logo du site" />
       </Link>
-      <div className="searchBar_contact">
-        <div className="contact">
-          <a href="mailto:yanngrard@gmail.com" target="_blank" rel="noreferrer">
-            <span className="contact_link"> ✉️ Contactez-nous</span>
-          </a>
-          <span className="contact_logo">
+      <div className="logos_searchbar_basket">
+        <div className="logos_searchbar">
+          <span className="logos">
             <a href="http://www.facebook.com" target="_blank" rel="noreferrer">
               <img className="logo_sn" src={facebook} alt="facebook" />
             </a>
@@ -31,18 +28,23 @@ function Navbar() {
               <img className="logo_sn" src={twitter} alt="twitter" />
             </a>
           </span>
-          <span className="flag_logo">
-            <img className="flag" src={french} alt="french" />
-            <img className="flag" src={uk} alt="uk" />
-          </span>
+          <SearchBar />
         </div>
-        <SearchBar />
+        <div className="div_buttons">
+          <Link to="/panier">
+            <button className="basket_button" type="button">
+              <img className="basket_logo" src={panier} alt="panier" />
+              <span className="button_text">Mon panier</span>
+            </button>
+          </Link>
+          <Link to="/panier">
+            <button className="account_button" type="button">
+              <img className="account_logo" src={avatar} alt="panier" />
+              <span className="button_text">Mon compte</span>
+            </button>
+          </Link>
+        </div>
       </div>
-      <Link to="/panier">
-        <button className="basket_button" type="button">
-          🛒 Mon panier
-        </button>
-      </Link>
     </div>
   );
 }

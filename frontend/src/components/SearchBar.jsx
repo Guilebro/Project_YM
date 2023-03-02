@@ -55,15 +55,11 @@ function SearchBar() {
                 id={element.id}
                 name={element.name}
                 picture={element.picture}
+                price={element.price}
                 genre={element.genre}
               />
             ))}
       </div>
-      {/* <Link to={`/recherche/${myGames.query}`}>
-        <button className="search_button" type="button">
-          Rechercher
-        </button>
-      </Link> */}
     </form>
   );
 }
