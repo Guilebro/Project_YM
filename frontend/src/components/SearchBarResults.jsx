@@ -19,9 +19,13 @@ function SearchBarResults({ id, name, picture, price, genre }) {
         >
           <Link className="results" to={`/jeu/${id}`}>
             <img className="game_picture_results" src={picture} alt="jeu" />
-            <span>{name}</span>
-            <span className="price_results">{`${price} €`}</span>
-            <span className="genre_results">{`- ${genre} -`}</span>
+            <div className="div_name_price_genre">
+              <div>
+                <span>{name}</span>
+                <span className="price_results">{`${price} €`}</span>
+              </div>
+              <span className="genre_results">{`dans: ${genre}`}</span>
+            </div>
           </Link>
         </div>
       </li>
