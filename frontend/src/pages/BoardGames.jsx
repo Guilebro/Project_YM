@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { myContext } from "../context/MyContext";
 import FilterLeft from "../components/FilterLeft";
 import Game from "../components/Game";
-import GameCard from "../components/GameCard";
 import "../css/BoardGames.css";
 import Select from "../components/Select";
+import SwitchButton from "../components/SwitchButton";
 
 function BoardGames() {
   const { fetchBoardGames, getBoardGames } = myContext();
@@ -15,31 +15,17 @@ function BoardGames() {
     getBoardGames();
   }, []);
 
-  const handleClick = () => {
-    setShow(null);
-  };
-
-  const handleClick2 = () => {
-    setShow(true);
-  };
-
   return (
     <div className="main_boardGames">
       <FilterLeft />
       <div className="boardgame_display">
         <h1 className="genre_title">Jeux de plateaux</h1>
-        <button onClick={handleClick} type="button">
-          X
-        </button>
-        <button onClick={handleClick2} type="button">
-          Y
-        </button>
-
+        <SwitchButton setShow={setShow} />
         <Select />
-        {fetchBoardGames.map((element) => (
-          <Link to={`/jeu/${element.id}`} key={element.id}>
-            {show ? (
-              <div>
+        <div style={{ width: "50vw", border: "1px solid red" }}>
+          {fetchBoardGames.map((element) => (
+            <Link to={`/jeu/${element.id}`} key={element.id}>
+              {show ? (
                 <Game
                   id={element.id}
                   name={element.name}
@@ -52,14 +38,14 @@ function BoardGames() {
                   nbPlayers={element.nb_players}
                   duration={element.duration}
                 />
-              </div>
-            ) : (
-              <div>
-                <GameCard />
-              </div>
-            )}
-          </Link>
-        ))}
+              ) : (
+                <div>
+                  <span>{element.name}</span>
+                </div>
+              )}
+            </Link>
+          ))}
+        </div>
       </div>
     </div>
   );
