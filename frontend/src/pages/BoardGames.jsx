@@ -22,7 +22,7 @@ function BoardGames() {
         <h1 className="genre_title">Jeux de plateaux</h1>
         <SwitchButton setShow={setShow} />
         <Select />
-        <div style={{ width: "50vw", border: "1px solid red" }}>
+        <div className="wrap_component">
           {fetchBoardGames.map((element) => (
             <Link to={`/jeu/${element.id}`} key={element.id}>
               {show ? (

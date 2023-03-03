@@ -15,6 +15,15 @@
   gap: 1vw;
 }
 
+.wrap_component {
+  width: 50vw ;
+  height: 50vh;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
 .genre_title {
   font-size: 3em;
 }

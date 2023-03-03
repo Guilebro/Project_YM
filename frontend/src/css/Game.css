@@ -4,9 +4,10 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  /* padding: 1vw; */
+  padding-top: 0.5vw;
+  padding-bottom: 0.5vw;
   border-radius: 10px;
-  border: 1px solid black;
+  border: 1px solid green;
 }
 
 .game_picture {
