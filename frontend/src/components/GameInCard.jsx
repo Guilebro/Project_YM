@@ -5,19 +5,19 @@ import "../css/GameInCard.css";
 
 function GameInCard({ id, name, price, picture }) {
   return (
-    <div className="oneCard">
+    <div className="main_game_card">
       <img className="game_picture_card" src={picture} alt="jeu" />
-      <span>{name}</span>
-      <span>{`${price} €`}</span>
+      <span className="game_name_card">{name}</span>
+      <span className="game_price_card">{`${price} €`}</span>
       <div className="div_basket_details_buttons_card">
         <Link to="/panier">
           <button className="basket_details_button_card" type="button">
-            Ajouter au panier
+            P
           </button>
         </Link>
         <Link to={`/jeu/${id}`}>
           <button className="basket_details_button_card" type="button">
-            Voir détails
+            D
           </button>
         </Link>
       </div>

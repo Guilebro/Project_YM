@@ -1,0 +1,15 @@
+.wrap_component {
+  width: 50vw;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.wrap_component_card {
+  width: 50vw;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1vh;
+}
