@@ -5,8 +5,8 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 0.5vw;
-  padding-bottom: 0.5vw;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
   border-radius: 10px;
   border: 1px solid black;
 }
