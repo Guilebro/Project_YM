@@ -56,7 +56,7 @@ function SearchBar() {
                 name={element.name}
                 picture={element.picture}
                 price={element.price}
-                genre={element.genre}
+                type={element.type}
               />
             ))}
       </div>
