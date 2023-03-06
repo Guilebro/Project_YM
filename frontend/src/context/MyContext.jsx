@@ -7,15 +7,17 @@ const context = createContext({});
 export function ContextProvider({ children }) {
   const { Provider } = context;
 
+  const [typeSelected, setTypeSelected] = useState("");
   const [fetchBoardGamesByCategoryId, setFetchBoardGamesByCategoryId] =
     useState([]);
   const [fetchOneGame, setFetchOneGame] = useState([]);
   const [fetchOneCategory, setFetchOneCategory] = useState([]);
   const [fetchAllCategories, setFetchAllCategories] = useState([]);
   const [fetchAllGames, setFetchAllGames] = useState([]);
+  const [editor, setEditor] = useState("");
 
   const getAllGames = () => {
-    const url = "http://localhost:8000/api/game";
+    const url = "http://localhost:8000/api/game/";
     axios.get(url).then((response) => setFetchAllGames(response.data));
   };
 
@@ -54,6 +56,10 @@ export function ContextProvider({ children }) {
         fetchAllCategories,
         getAllGames,
         fetchAllGames,
+        editor,
+        setEditor,
+        typeSelected,
+        setTypeSelected,
       }}
     >
       {children}

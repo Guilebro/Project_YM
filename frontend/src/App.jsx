@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import FilterNav from "./components/FilterNav";
@@ -16,18 +15,14 @@ import GameSearched from "./pages/GameSearched";
 import "./css/App.css";
 
 function App() {
-  const [typeSelected, setTypeSelected] = useState("");
   return (
     <div className="app">
       <Navbar />
-      <FilterNav setTypeSelected={setTypeSelected} />
+      <FilterNav />
       <Routes>
         <Route path="*" element={<Error />} />
         <Route path="/" element={<Home />} />
-        <Route
-          path="/categorie"
-          element={<BoardGames typeSelected={typeSelected} />}
-        />
+        <Route path="/categorie" element={<BoardGames />} />
         <Route path="/jeu/:id" element={<GameDetails />} />
         <Route path="/informations" element={<Informations />} />
         <Route path="/panier" element={<Basket />} />

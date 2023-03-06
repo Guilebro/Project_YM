@@ -1,14 +1,20 @@
 import React from "react";
 import "../css/FilterLeft.css";
+import { myContext } from "../context/MyContext";
 import {
   ageOption,
   durationOption,
   languageOption,
-  editorOption,
   playerOption,
 } from "../utils/allOption";
 
 function FilterLeft() {
+  const { setEditor, fetchAllGames } = myContext();
+
+  const handleChange = (e) => {
+    setEditor(e.target.value);
+  };
+
   return (
     <div className="main_filterLeft">
       <div className="doudi">
@@ -32,11 +38,17 @@ function FilterLeft() {
         </div>
         <div className="editor_select">
           <label htmlFor="editor">Editeur</label>
-          <select id="">
+          <select id="" onChange={handleChange}>
             <option value=""> Toute </option>
-            {editorOption.map((editor) => (
-              <option value="">{editor.option}</option>
-            ))}
+            {fetchAllGames.find &&
+              fetchAllGames
+                .map((editor) => {
+                  return editor.editor;
+                })
+                .filter((editor, index, self) => {
+                  return self.indexOf(editor) === index;
+                })
+                .map((editor) => <option value={editor}>{editor}</option>)}
           </select>
         </div>
         <div className="language_select">

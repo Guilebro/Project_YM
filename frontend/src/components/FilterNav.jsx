@@ -1,11 +1,10 @@
-import PropTypes from "prop-types";
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { myContext } from "../context/MyContext";
 import "../css/FilterNav.css";
 
-function FilterNav({ setTypeSelected }) {
-  const { fetchAllCategories, getCategories } = myContext();
+function FilterNav() {
+  const { fetchAllCategories, getCategories, setTypeSelected } = myContext();
 
   useEffect(() => {
     getCategories();
@@ -34,9 +33,5 @@ function FilterNav({ setTypeSelected }) {
     </div>
   );
 }
-
-FilterNav.propTypes = {
-  setTypeSelected: PropTypes.func.isRequired,
-};
 
 export default FilterNav;
