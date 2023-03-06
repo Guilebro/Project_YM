@@ -7,30 +7,33 @@ const context = createContext({});
 export function ContextProvider({ children }) {
   const { Provider } = context;
 
-  const [fetchBoardGames, setFetchBoardGames] = useState([]);
-  const [fetchWarGames, setFetchWarGames] = useState([]);
-  const [fetchCardGames, setFetchCardGames] = useState([]);
-  const [fetchKidGames, setFetchKidGames] = useState([]);
+  const [fetchBoardGamesByCategoryId, setFetchBoardGamesByCategoryId] =
+    useState([]);
   const [fetchOneGame, setFetchOneGame] = useState([]);
+  const [fetchOneCategory, setFetchOneCategory] = useState([]);
+  const [fetchAllCategories, setFetchAllCategories] = useState([]);
+  const [fetchAllGames, setFetchAllGames] = useState([]);
 
-  const getBoardGames = () => {
-    const url = "http://localhost:8000/api/game/genre/Jeux de plateaux";
-    axios.get(url).then((response) => setFetchBoardGames(response.data));
+  const getAllGames = () => {
+    const url = "http://localhost:8000/api/game";
+    axios.get(url).then((response) => setFetchAllGames(response.data));
   };
 
-  const getWarGames = () => {
-    const url = "http://localhost:8000/api/game/genre/Jeux de figurines";
-    axios.get(url).then((response) => setFetchWarGames(response.data));
+  const getBoardGamesByCategoryId = (id) => {
+    const url = `http://localhost:8000/api/game/category/${id}`;
+    axios
+      .get(url)
+      .then((response) => setFetchBoardGamesByCategoryId(response.data));
   };
 
-  const getCardGames = () => {
-    const url = "http://localhost:8000/api/game/genre/Jeux de cartes";
-    axios.get(url).then((response) => setFetchCardGames(response.data));
+  const getCategories = () => {
+    const url = "http://localhost:8000/api/category";
+    axios.get(url).then((response) => setFetchAllCategories(response.data));
   };
 
-  const getKidGames = () => {
-    const url = "http://localhost:8000/api/game/genre/Jeux pour enfants";
-    axios.get(url).then((response) => setFetchKidGames(response.data));
+  const getOneCategory = (id) => {
+    const url = `http://localhost:8000/api/category/${id}`;
+    axios.get(url).then((response) => setFetchOneCategory(response.data));
   };
 
   const getOneGame = (id) => {
@@ -41,16 +44,16 @@ export function ContextProvider({ children }) {
   return (
     <Provider
       value={{
-        getBoardGames,
-        fetchBoardGames,
-        getCardGames,
-        fetchCardGames,
-        getWarGames,
-        fetchWarGames,
-        getKidGames,
-        fetchKidGames,
+        getBoardGamesByCategoryId,
+        fetchBoardGamesByCategoryId,
         fetchOneGame,
         getOneGame,
+        fetchOneCategory,
+        getOneCategory,
+        getCategories,
+        fetchAllCategories,
+        getAllGames,
+        fetchAllGames,
       }}
     >
       {children}
