@@ -15,6 +15,14 @@ const categoryController = {
       .then(([category]) => res.send(category))
       .catch((err) => res.send(err));
   },
+
+  getCategoryByGame: (req, res) => {
+    const { id } = req.params;
+    categoryModel
+      .findCategoryByGame(id)
+      .then(([category]) => res.send(category))
+      .catch((err) => res.send(err));
+  },
 };
 
 module.exports = categoryController;
