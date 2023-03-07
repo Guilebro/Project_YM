@@ -3,7 +3,6 @@ import FilterLeft from "../components/FilterLeft";
 import "../css/BoardGames.css";
 import Select from "../components/Select";
 import SwitchButton from "../components/SwitchButton";
-// eslint-disable-next-line import/no-named-as-default, import/no-named-as-default-member
 import GameDisplay from "../components/GameDisplay";
 
 function BoardGames() {
