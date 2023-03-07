@@ -8,24 +8,20 @@ export function ContextProvider({ children }) {
   const { Provider } = context;
 
   const [typeSelected, setTypeSelected] = useState("");
-  const [fetchBoardGamesByCategoryId, setFetchBoardGamesByCategoryId] =
-    useState([]);
   const [fetchOneGame, setFetchOneGame] = useState([]);
-  const [fetchOneCategory, setFetchOneCategory] = useState([]);
+  const [fetchGameByCategory, setFetchGameByCategory] = useState([]);
   const [fetchAllCategories, setFetchAllCategories] = useState([]);
   const [fetchAllGames, setFetchAllGames] = useState([]);
+  const [fetchCategoryByGame, setFetchCategoryByGame] = useState([]);
   const [editor, setEditor] = useState("");
+  const [language, setLanguage] = useState("");
+  const [player, setPlayer] = useState("");
+  const [age, setAge] = useState("");
+  const [duration, setDuration] = useState("");
 
   const getAllGames = () => {
     const url = "http://localhost:8000/api/game/";
     axios.get(url).then((response) => setFetchAllGames(response.data));
-  };
-
-  const getBoardGamesByCategoryId = (id) => {
-    const url = `http://localhost:8000/api/game/category/${id}`;
-    axios
-      .get(url)
-      .then((response) => setFetchBoardGamesByCategoryId(response.data));
   };
 
   const getCategories = () => {
@@ -33,9 +29,9 @@ export function ContextProvider({ children }) {
     axios.get(url).then((response) => setFetchAllCategories(response.data));
   };
 
-  const getOneCategory = (id) => {
-    const url = `http://localhost:8000/api/category/${id}`;
-    axios.get(url).then((response) => setFetchOneCategory(response.data));
+  const getGameByCategory = (id) => {
+    const url = `http://localhost:8000/api/game/category/${id}`;
+    axios.get(url).then((response) => setFetchGameByCategory(response.data));
   };
 
   const getOneGame = (id) => {
@@ -43,15 +39,18 @@ export function ContextProvider({ children }) {
     axios.get(url).then((response) => setFetchOneGame(response.data));
   };
 
+  const getCategoryByGame = (id) => {
+    const url = `http://localhost:8000/api/category/game/${id}`;
+    axios.get(url).then((response) => setFetchCategoryByGame(response.data));
+  };
+
   return (
     <Provider
       value={{
-        getBoardGamesByCategoryId,
-        fetchBoardGamesByCategoryId,
         fetchOneGame,
         getOneGame,
-        fetchOneCategory,
-        getOneCategory,
+        fetchGameByCategory,
+        getGameByCategory,
         getCategories,
         fetchAllCategories,
         getAllGames,
@@ -60,6 +59,16 @@ export function ContextProvider({ children }) {
         setEditor,
         typeSelected,
         setTypeSelected,
+        language,
+        setLanguage,
+        player,
+        setPlayer,
+        age,
+        setAge,
+        duration,
+        setDuration,
+        getCategoryByGame,
+        fetchCategoryByGame,
       }}
     >
       {children}
