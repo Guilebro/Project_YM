@@ -8,8 +8,6 @@ export function ContextProvider({ children }) {
   const { Provider } = context;
 
   const [typeSelected, setTypeSelected] = useState("");
-  const [fetchBoardGamesByCategoryId, setFetchBoardGamesByCategoryId] =
-    useState([]);
   const [fetchOneGame, setFetchOneGame] = useState([]);
   const [fetchOneCategory, setFetchOneCategory] = useState([]);
   const [fetchAllCategories, setFetchAllCategories] = useState([]);
@@ -23,13 +21,6 @@ export function ContextProvider({ children }) {
   const getAllGames = () => {
     const url = "http://localhost:8000/api/game/";
     axios.get(url).then((response) => setFetchAllGames(response.data));
-  };
-
-  const getBoardGamesByCategoryId = (id) => {
-    const url = `http://localhost:8000/api/game/category/${id}`;
-    axios
-      .get(url)
-      .then((response) => setFetchBoardGamesByCategoryId(response.data));
   };
 
   const getCategories = () => {
@@ -50,8 +41,6 @@ export function ContextProvider({ children }) {
   return (
     <Provider
       value={{
-        getBoardGamesByCategoryId,
-        fetchBoardGamesByCategoryId,
         fetchOneGame,
         getOneGame,
         fetchOneCategory,
