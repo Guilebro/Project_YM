@@ -15,6 +15,10 @@ export function ContextProvider({ children }) {
   const [fetchAllCategories, setFetchAllCategories] = useState([]);
   const [fetchAllGames, setFetchAllGames] = useState([]);
   const [editor, setEditor] = useState("");
+  const [language, setLanguage] = useState("");
+  const [player, setPlayer] = useState("");
+  const [age, setAge] = useState("");
+  const [duration, setDuration] = useState("");
 
   const getAllGames = () => {
     const url = "http://localhost:8000/api/game/";
@@ -60,6 +64,14 @@ export function ContextProvider({ children }) {
         setEditor,
         typeSelected,
         setTypeSelected,
+        language,
+        setLanguage,
+        player,
+        setPlayer,
+        age,
+        setAge,
+        duration,
+        setDuration,
       }}
     >
       {children}

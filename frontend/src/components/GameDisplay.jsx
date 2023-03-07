@@ -7,7 +7,16 @@ import "../css/GameDisplay.css";
 import GameInCard from "./GameInCard";
 
 function GameDisplay({ show }) {
-  const { fetchAllGames, getAllGames, editor, typeSelected } = myContext();
+  const {
+    typeSelected,
+    fetchAllGames,
+    getAllGames,
+    editor,
+    language,
+    player,
+    age,
+    duration,
+  } = myContext();
 
   useEffect(() => {
     getAllGames();
@@ -21,7 +30,12 @@ function GameDisplay({ show }) {
             (el) =>
               typeSelected === "" || el.category_id === Number(typeSelected)
           )
-          .filter((el2) => editor === "" || el2.editor === editor)
+          .filter((el) => editor === "" || el.editor === editor)
+          .filter((el) => language === "" || el.language === language)
+          .filter((el) => player === "" || el.nb_players === player)
+          .filter((el) => age === "" || el.age === Number(age))
+          .filter((el) => duration === "" || el.duration === duration)
+
           .map((element) => (
             <Link to={`/jeu/${element.id}`} key={element.id}>
               {show ? (

@@ -18,7 +18,7 @@ function FilterNav() {
     <div className="main_filterNav">
       <div className="filter_cards_div">
         {fetchAllCategories.map((element) => (
-          <Link to="/categorie">
+          <Link to="/categorie" key={element.id}>
             <button
               className="filter_cards"
               type="button"
