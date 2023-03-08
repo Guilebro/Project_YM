@@ -10,6 +10,7 @@ function FilterLeft() {
     setPlayer,
     setAge,
     setDuration,
+    searchResult,
   } = myContext();
 
   const editorSelect = (e) => {
@@ -40,7 +41,7 @@ function FilterLeft() {
           <select id="" onChange={ageSelect}>
             <option value=""> Tous </option>
             {fetchAllGames &&
-              fetchAllGames
+              searchResult
                 .map((age) => {
                   return age.age;
                 })
