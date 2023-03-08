@@ -37,7 +37,7 @@ function Navbar() {
               <span className="button_text">Mon panier</span>
             </button>
           </Link>
-          <Link to="/panier">
+          <Link to="/mon-compte">
             <button className="account_button" type="button">
               <img className="account_logo" src={avatar} alt="panier" />
               <span className="button_text">Mon compte</span>

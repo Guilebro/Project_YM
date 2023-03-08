@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import FilterLeft from "../components/FilterLeft";
 import { myContext } from "../context/MyContext";
 import "../css/BoardGames.css";
@@ -7,7 +7,6 @@ import SwitchButton from "../components/SwitchButton";
 import GameDisplay from "../components/GameDisplay";
 
 function BoardGames() {
-  const [show, setShow] = useState(true);
   const { getCategories, fetchAllCategories, typeSelected } = myContext();
 
   useEffect(() => {
@@ -23,9 +22,9 @@ function BoardGames() {
           .map((element) => (
             <h1 className="genre_title">{element.type}</h1>
           ))}
-        <SwitchButton setShow={setShow} />
+        <SwitchButton />
         <Select />
-        <GameDisplay show={show} />
+        <GameDisplay />
       </div>
     </div>
   );

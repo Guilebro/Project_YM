@@ -1,8 +1,9 @@
 import React from "react";
 import FilterLeft from "../components/FilterLeft";
-import "../css/BoardGames.css";
 import Select from "../components/Select";
 import GameSearchedDisplay from "../components/GameSearchedDisplay";
+import SwitchButton from "../components/SwitchButton";
+import "../css/BoardGames.css";
 
 function GameSearched() {
   return (
@@ -10,6 +11,7 @@ function GameSearched() {
       <FilterLeft />
       <div className="boardgame_display">
         <h1 className="genre_title">résultats de recherche</h1>
+        <SwitchButton />
         <Select />
         <GameSearchedDisplay />
       </div>

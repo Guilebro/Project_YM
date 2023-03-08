@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Error from "./pages/Error";
 import Basket from "./pages/Basket";
+import Account from "./pages/Account";
 import Informations from "./pages/Informations";
 import BoardGames from "./pages/BoardGames";
 import GameDetails from "./pages/GameDetails";
@@ -23,6 +24,7 @@ function App() {
         <Route path="/jeu/:id" element={<GameDetails />} />
         <Route path="/informations" element={<Informations />} />
         <Route path="/panier" element={<Basket />} />
+        <Route path="/mon-compte" element={<Account />} />
         <Route path="/recherche/:query" element={<GameSearched />} />
       </Routes>
       <Footer />

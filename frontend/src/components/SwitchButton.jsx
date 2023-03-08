@@ -1,7 +1,9 @@
-import PropTypes from "prop-types";
 import React from "react";
+import { myContext } from "../context/MyContext";
 
-function SwitchButton({ setShow }) {
+function SwitchButton() {
+  const { setShow } = myContext();
+
   const handleClick = () => {
     setShow(null);
   };
@@ -21,9 +23,5 @@ function SwitchButton({ setShow }) {
     </div>
   );
 }
-
-SwitchButton.propTypes = {
-  setShow: PropTypes.func.isRequired,
-};
 
 export default SwitchButton;
