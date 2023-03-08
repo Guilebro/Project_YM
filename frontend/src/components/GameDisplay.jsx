@@ -6,7 +6,7 @@ import Game from "./Game";
 import "../css/GameDisplay.css";
 import GameInCard from "./GameInCard";
 
-function GameDisplay({ show }) {
+function GameDisplay() {
   const {
     typeSelected,
     fetchAllGames,
@@ -16,6 +16,7 @@ function GameDisplay({ show }) {
     player,
     age,
     duration,
+    show,
   } = myContext();
 
   useEffect(() => {
@@ -78,7 +79,6 @@ GameDisplay.propTypes = {
   fetchBoardGamesByCategoryId: PropTypes.shape({
     map: PropTypes.func.isRequired,
   }),
-  show: PropTypes.func.isRequired,
 };
 
 export default GameDisplay;

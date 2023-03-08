@@ -7,12 +7,19 @@ const context = createContext({});
 export function ContextProvider({ children }) {
   const { Provider } = context;
 
+  const [show, setShow] = useState(true);
+  const [getGames, setGetGames] = useState("");
+  const [myGames, setMyGames] = useState({
+    query: "",
+    list: [],
+  });
   const [typeSelected, setTypeSelected] = useState("");
   const [fetchOneGame, setFetchOneGame] = useState([]);
   const [fetchGameByCategory, setFetchGameByCategory] = useState([]);
   const [fetchAllCategories, setFetchAllCategories] = useState([]);
   const [fetchAllGames, setFetchAllGames] = useState([]);
   const [fetchCategoryByGame, setFetchCategoryByGame] = useState([]);
+  const [searchResult, setSearchResult] = useState([]);
   const [editor, setEditor] = useState("");
   const [language, setLanguage] = useState("");
   const [player, setPlayer] = useState("");
@@ -44,6 +51,16 @@ export function ContextProvider({ children }) {
     axios.get(url).then((response) => setFetchCategoryByGame(response.data));
   };
 
+  const searchList = () => {
+    const url = "http://localhost:8000/api/game";
+    axios.get(url).then((response) => setSearchResult(response.data));
+  };
+
+  const fetchGameTyped = () => {
+    const url = "http://localhost:8000/api/game";
+    axios.get(url).then((response) => setGetGames(response.data));
+  };
+
   return (
     <Provider
       value={{
@@ -69,6 +86,15 @@ export function ContextProvider({ children }) {
         setDuration,
         getCategoryByGame,
         fetchCategoryByGame,
+        searchList,
+        searchResult,
+        show,
+        setShow,
+        getGames,
+        setGetGames,
+        myGames,
+        setMyGames,
+        fetchGameTyped,
       }}
     >
       {children}

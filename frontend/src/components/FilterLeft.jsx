@@ -10,6 +10,7 @@ function FilterLeft() {
     setPlayer,
     setAge,
     setDuration,
+    searchResult,
   } = myContext();
 
   const editorSelect = (e) => {
@@ -40,7 +41,7 @@ function FilterLeft() {
           <select id="" onChange={ageSelect}>
             <option value=""> Tous </option>
             {fetchAllGames &&
-              fetchAllGames
+              searchResult
                 .map((age) => {
                   return age.age;
                 })
@@ -57,7 +58,7 @@ function FilterLeft() {
           <select id="" onChange={durationSelect}>
             <option value=""> Toute </option>
             {fetchAllGames &&
-              fetchAllGames
+              searchResult
                 .map((duration) => {
                   return duration.duration;
                 })
@@ -74,7 +75,7 @@ function FilterLeft() {
           <select id="" onChange={editorSelect}>
             <option value=""> Toute </option>
             {fetchAllGames &&
-              fetchAllGames
+              searchResult
                 .map((editor) => {
                   return editor.editor;
                 })
@@ -89,7 +90,7 @@ function FilterLeft() {
           <select id="" onChange={languageSelect}>
             <option value=""> Toute </option>
             {fetchAllGames &&
-              fetchAllGames
+              searchResult
                 .map((language) => {
                   return language.language;
                 })
@@ -106,7 +107,7 @@ function FilterLeft() {
           <select id="" onChange={playerSelect}>
             <option value=""> Tous </option>
             {fetchAllGames &&
-              fetchAllGames
+              searchResult
                 .map((number) => {
                   return number.nb_players;
                 })
