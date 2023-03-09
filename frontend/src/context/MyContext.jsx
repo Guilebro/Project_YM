@@ -9,10 +9,10 @@ export function ContextProvider({ children }) {
 
   const [show, setShow] = useState(true);
   const [getGames, setGetGames] = useState("");
-  const [myGames, setMyGames] = useState({
-    query: "",
-    list: [],
-  });
+  // const [myGames, setMyGames] = useState({
+  //   query: "",
+  //   list: [],
+  // });
   const [typeSelected, setTypeSelected] = useState("");
   const [fetchOneGame, setFetchOneGame] = useState([]);
   const [fetchGameByCategory, setFetchGameByCategory] = useState([]);
@@ -25,6 +25,7 @@ export function ContextProvider({ children }) {
   const [player, setPlayer] = useState("");
   const [age, setAge] = useState("");
   const [duration, setDuration] = useState("");
+  const [sortName, setSortName] = useState("");
 
   const getAllGames = () => {
     const url = "http://localhost:8000/api/game/";
@@ -56,10 +57,10 @@ export function ContextProvider({ children }) {
     axios.get(url).then((response) => setSearchResult(response.data));
   };
 
-  const fetchGameTyped = () => {
-    const url = "http://localhost:8000/api/game";
-    axios.get(url).then((response) => setGetGames(response.data));
-  };
+  // const fetchGameTyped = () => {
+  //   const url = "http://localhost:8000/api/game";
+  //   axios.get(url).then((response) => setGetGames(response.data));
+  // };
 
   return (
     <Provider
@@ -92,9 +93,11 @@ export function ContextProvider({ children }) {
         setShow,
         getGames,
         setGetGames,
-        myGames,
-        setMyGames,
-        fetchGameTyped,
+        // myGames,
+        // setMyGames,
+        // fetchGameTyped,
+        sortName,
+        setSortName,
       }}
     >
       {children}

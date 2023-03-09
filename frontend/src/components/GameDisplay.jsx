@@ -36,7 +36,6 @@ function GameDisplay() {
           .filter((el) => player === "" || el.nb_players === player)
           .filter((el) => age === "" || el.age === Number(age))
           .filter((el) => duration === "" || el.duration === duration)
-
           .map((element) => (
             <Link to={`/jeu/${element.id}`} key={element.id}>
               {show ? (

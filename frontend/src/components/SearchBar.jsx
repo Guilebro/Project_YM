@@ -1,31 +1,28 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { myContext } from "../context/MyContext";
 import SearchBarResults from "./SearchBarResults";
 import "../css/SearchBar.css";
 
 function SearchBar() {
   const navigate = useNavigate();
-  const { myGames, setMyGames, getGames, fetchGameTyped } = myContext();
+  const [datas, setDatas] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    fetchGameTyped();
+    axios
+      .get("http://localhost:8000/api/game")
+      .then((response) => setDatas(response.data));
   }, []);
 
-  const handleChange = (e) => {
-    const searchWord = e.target.value;
-    const results = getGames.filter((games) => {
-      if (searchWord === "") return games;
-      return games.name.toLowerCase().includes(searchWord.toLowerCase());
-    });
-    setMyGames({
-      query: searchWord,
-      list: results,
-    });
+  const handleSearchTerm = (e) => {
+    const { value } = e.target;
+    // eslint-disable-next-line no-unused-expressions
+    value.length > 2 ? setSearchTerm(value) : setSearchTerm("");
   };
 
   const handleSearch = () => {
-    navigate(`/recherche/${myGames.query}`);
+    navigate(`/recherche/${searchTerm}`);
   };
 
   return (
@@ -33,15 +30,17 @@ function SearchBar() {
       <input
         className="input_search"
         type="search"
-        value={myGames.query}
-        onChange={handleChange}
+        onChange={handleSearchTerm}
         name="input_search"
         placeholder="Rechercher un jeu..."
       />
       <div className="div_results">
-        {myGames.query === ""
-          ? ""
-          : myGames.list.map((element) => (
+        {searchTerm &&
+          datas
+            .filter((element) =>
+              element.name.toLowerCase().includes(searchTerm.toLowerCase())
+            )
+            .map((element) => (
               <SearchBarResults
                 id={element.id}
                 name={element.name}
