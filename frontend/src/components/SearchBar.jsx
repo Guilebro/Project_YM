@@ -1,18 +1,15 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { myContext } from "../context/MyContext";
 import SearchBarResults from "./SearchBarResults";
 import "../css/SearchBar.css";
 
 function SearchBar() {
   const navigate = useNavigate();
-  const [datas, setDatas] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("");
+  const { datas, searchTerm, setSearchTerm, fetchGameTyped } = myContext();
 
   useEffect(() => {
-    axios
-      .get("http://localhost:8000/api/game")
-      .then((response) => setDatas(response.data));
+    fetchGameTyped();
   }, []);
 
   const handleSearchTerm = (e) => {
