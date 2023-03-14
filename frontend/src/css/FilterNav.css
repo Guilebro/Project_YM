@@ -15,6 +15,7 @@
 }
 
 .filter_cards {
+  z-index: 1;
   font-size: 1.2em;
   color: black;
   border-radius: 10px;

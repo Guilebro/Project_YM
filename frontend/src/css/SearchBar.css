@@ -19,6 +19,7 @@
 
 .div_results {
   position: absolute;
+  z-index: 2;
   margin-top: 1vh;
   width: 25vw;
 }
