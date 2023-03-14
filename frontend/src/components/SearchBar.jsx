@@ -6,10 +6,10 @@ import "../css/SearchBar.css";
 
 function SearchBar() {
   const navigate = useNavigate();
-  const { datas, searchTerm, setSearchTerm, fetchGameTyped } = myContext();
+  const { fetchAllGames, searchTerm, setSearchTerm, getAllGames } = myContext();
 
   useEffect(() => {
-    fetchGameTyped();
+    getAllGames();
   }, []);
 
   const handleSearchTerm = (e) => {
@@ -33,7 +33,7 @@ function SearchBar() {
       />
       <div className="div_results">
         {searchTerm &&
-          datas
+          fetchAllGames
             .filter((element) =>
               element.name.toLowerCase().includes(searchTerm.toLowerCase())
             )

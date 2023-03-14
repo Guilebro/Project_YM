@@ -7,22 +7,20 @@ const context = createContext({});
 export function ContextProvider({ children }) {
   const { Provider } = context;
 
-  const [show, setShow] = useState(true);
   const [getGames, setGetGames] = useState("");
-  const [datas, setDatas] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [typeSelected, setTypeSelected] = useState("");
-  const [fetchOneGame, setFetchOneGame] = useState([]);
-  const [fetchGameByCategory, setFetchGameByCategory] = useState([]);
-  const [fetchAllCategories, setFetchAllCategories] = useState([]);
-  const [fetchAllGames, setFetchAllGames] = useState([]);
-  const [fetchCategoryByGame, setFetchCategoryByGame] = useState([]);
-  const [searchResult, setSearchResult] = useState([]);
   const [editor, setEditor] = useState("");
   const [language, setLanguage] = useState("");
   const [player, setPlayer] = useState("");
   const [age, setAge] = useState("");
   const [duration, setDuration] = useState("");
+  const [fetchOneGame, setFetchOneGame] = useState([]);
+  const [fetchGameByCategory, setFetchGameByCategory] = useState([]);
+  const [fetchAllCategories, setFetchAllCategories] = useState([]);
+  const [fetchAllGames, setFetchAllGames] = useState([]);
+  const [fetchCategoryByGame, setFetchCategoryByGame] = useState([]);
+  const [show, setShow] = useState(true);
 
   const getAllGames = () => {
     const url = "http://localhost:8000/api/game/";
@@ -47,16 +45,6 @@ export function ContextProvider({ children }) {
   const getCategoryByGame = (id) => {
     const url = `http://localhost:8000/api/category/game/${id}`;
     axios.get(url).then((response) => setFetchCategoryByGame(response.data));
-  };
-
-  const searchList = () => {
-    const url = "http://localhost:8000/api/game";
-    axios.get(url).then((response) => setSearchResult(response.data));
-  };
-
-  const fetchGameTyped = () => {
-    const url = "http://localhost:8000/api/game";
-    axios.get(url).then((response) => setDatas(response.data));
   };
 
   return (
@@ -84,14 +72,10 @@ export function ContextProvider({ children }) {
         setDuration,
         getCategoryByGame,
         fetchCategoryByGame,
-        searchList,
-        searchResult,
         show,
         setShow,
         getGames,
         setGetGames,
-        fetchGameTyped,
-        datas,
         searchTerm,
         setSearchTerm,
       }}
