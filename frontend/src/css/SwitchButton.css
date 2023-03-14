@@ -1,6 +1,5 @@
-.div_button {
-  border: 1px solid black;
+.div_switchButton {
   display: flex;
-  width: fit-content;
   justify-content: flex-end;
+  gap: 0.5vw;
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import { myContext } from "../context/MyContext";
+import "../css/SwitchButton.css";
 
 function SwitchButton() {
   const { setShow } = myContext();
@@ -13,7 +14,7 @@ function SwitchButton() {
   };
 
   return (
-    <div>
+    <div className="div_switchButton">
       <button onClick={handleClick} type="button">
         X
       </button>

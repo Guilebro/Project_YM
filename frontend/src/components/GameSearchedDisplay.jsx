@@ -13,18 +13,18 @@ function GameSearchedDisplay() {
     player,
     age,
     duration,
-    searchList,
-    searchResult,
+    getAllGames,
+    fetchAllGames,
     show,
   } = myContext();
 
   useEffect(() => {
-    searchList();
+    getAllGames();
   }, []);
 
   return (
     <div className={show ? "wrap_component" : "wrap_component_card"}>
-      {searchResult
+      {fetchAllGames
         .filter((game) => game.name.toLowerCase().includes(query.toLowerCase()))
         .filter((el) => editor === "" || el.editor === editor)
         .filter((el) => language === "" || el.language === language)
